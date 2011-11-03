@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/gothic
+# catalog-date 2009-01-16 17:12:15 +0100
+# catalog-license collection
+# catalog-version undef
 Name:		texlive-gothic
 Version:	20090116
 Release:	1
@@ -129,6 +135,7 @@ using virtual fonts, and OT1 and T1, using Metafont.
 %{_texmfdistdir}/fonts/vf/public/gothic/tgoth.vf
 %{_texmfdistdir}/fonts/vf/public/gothic/tswab.vf
 %doc %{_texmfdistdir}/doc/fonts/gothic/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -139,3 +146,5 @@ using virtual fonts, and OT1 and T1, using Metafont.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
