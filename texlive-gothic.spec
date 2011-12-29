@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 A collection of fonts that reproduce those used in "old German"
@@ -27,20 +26,12 @@ a font containing decorative initials. In addition, there are
 two re-encoding packages for Haralambous's fonts, providing T1,
 using virtual fonts, and OT1 and T1, using Metafont.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -136,7 +127,6 @@ using virtual fonts, and OT1 and T1, using Metafont.
 %{_texmfdistdir}/fonts/vf/public/gothic/tgoth.vf
 %{_texmfdistdir}/fonts/vf/public/gothic/tswab.vf
 %doc %{_texmfdistdir}/doc/fonts/gothic/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -147,5 +137,3 @@ using virtual fonts, and OT1 and T1, using Metafont.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
