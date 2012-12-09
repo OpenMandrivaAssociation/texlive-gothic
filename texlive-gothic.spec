@@ -137,3 +137,17 @@ using virtual fonts, and OT1 and T1, using Metafont.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090116-2
++ Revision: 752370
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090116-1
++ Revision: 718574
+- texlive-gothic
+- texlive-gothic
+- texlive-gothic
+- texlive-gothic
+
