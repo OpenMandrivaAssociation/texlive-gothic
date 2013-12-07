@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-gothic
 Version:	20090116
-Release:	3
+Release:	4
 Summary:	A collection of old German-style fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gothic
