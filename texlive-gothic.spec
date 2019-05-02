@@ -1,5 +1,5 @@
 Name:		texlive-gothic
-Version:	20190130
+Version:	20190228
 Release:	1
 Summary:	A collection of old German-style fonts
 Group:		Publishing
