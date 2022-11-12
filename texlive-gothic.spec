@@ -1,12 +1,12 @@
 Name:		texlive-gothic
-Version:	20190228
+Version:	49869
 Release:	1
 Summary:	A collection of old German-style fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/gothic
 License:	COLLECTION
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gothic.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gothic.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gothic.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gothic.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -21,12 +21,12 @@ two re-encoding packages for Haralambous's fonts, providing T1,
 using virtual fonts, and OT1 and T1, using Metafont.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -36,7 +36,7 @@ using virtual fonts, and OT1 and T1, using Metafont.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
