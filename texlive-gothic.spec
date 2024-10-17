@@ -3,7 +3,7 @@ Version:	49869
 Release:	2
 Summary:	A collection of old German-style fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/gothic
+URL:		https://www.ctan.org/tex-archive/fonts/gothic
 License:	COLLECTION
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gothic.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gothic.doc.r%{version}.tar.xz
